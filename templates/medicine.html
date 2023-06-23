@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ medicine }}</title>
+</head>
+
+<body style="margin: 0 auto;
+background-color: cadetblue;">
+    <div style=" margin: 0 auto; width: 100%; 
+    height: 50px; background-color: rgb(96, 95, 158);">
+        <ul style="display: flex;
+                    justify-content: space-around;
+                    list-style: none;
+                    ">
+            <li><a href="http://127.0.0.1:8000/" style="color: white;">Главная</a></li>
+            <li><a href="" style="color: white;">О нас</a></li>
+            <li><a href="" style="color: white;">Корзина</a></li>
+        </ul>
+    </div>
+
+    </div>
+
+    <div style="margin: 0 auto;
+            margin-top: 20px;
+            width: 300px;
+            height: 500px;
+            background-color: rgb(96, 95, 158);
+            border: 5px solid black;">
+        <h1 style="text-align: center;
+                font-weight: bold;
+                font-size: 25px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">ПОДРОБНОСТИ О
+            ЛЕКАРСТВЕ:</h1>
+        <div style="text-align: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            <p>{{ medicine }}</p>
+            <p>Дата производства: {{ medicine.manufac_date }}</p>
+            <p>Срок истечения: {{ medicine.expir_date }}</p>
+            <p>Тип лекарства: {{ medicine.mtype }}</p>
+            <p>Цена: {{ medicine.price }}</p>
+            <p>Описание:</p>
+            <p style="text-align: center;">{{ medicine.description }}</p>
+            <style>
+                p {
+                    color: black;
+                    font-size: 20px;
+                }
+            </style>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

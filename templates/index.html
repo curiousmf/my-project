@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="margin: 0 auto;
+            background-color: cadetblue;">
+    <div style=" margin: 0 auto; width: 100%; 
+    height: 50px; background-color: rgb(96, 95, 158);">
+        <ul style="display: flex;
+                    justify-content: space-around;
+                    list-style: none;
+                    ">
+            <li><a href="" style="color: white;">Главная</a></li>
+            <li><a href="" style="color: white;">О нас</a></li>
+            <li><a href="" style="color: white;">Корзина</a></li>
+        </ul>
+    </div>
+
+    <div style="display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;">
+        <div style="margin-top: 20px;
+                    width: 250px;">
+            {% for medicine in medicines %}
+            <div style="
+            border: 3px solid black;
+                            margin-bottom: 10px;
+                            text-align: center;
+
+                            background-color: rgb(96, 95, 158);">
+                <p>{{ medicine }}</p>
+                <p>{{ medicine.price }} сум</p>
+                <p>{{ medicine.mtype }}</p>
+                <p>
+                    <a href="{{ medicine.get_absolute_url }}" style="background-color: rgb(70, 0, 128);
+                                color: white;">
+                        Перейти к подробностям
+                    </a>
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>
